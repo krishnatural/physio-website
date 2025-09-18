@@ -12,50 +12,64 @@
   <header class="bg-white shadow">
     <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
       <h1 class="text-2xl font-bold text-green-600">PhysioCare</h1>
-      <nav class="space-x-6">
+      <button id="menu-btn" class="block md:hidden text-gray-700 focus:outline-none text-2xl">☰</button>
+      <nav id="menu" class="hidden md:flex space-x-6">
         <a href="index.html" class="hover:text-green-600">Home</a>
         <a href="about.html" class="hover:text-green-600">About</a>
         <a href="services.html" class="text-green-600 font-semibold">Services</a>
         <a href="contact.html" class="hover:text-green-600">Contact</a>
       </nav>
     </div>
+    <div id="mobile-menu" class="hidden flex-col space-y-2 px-4 pb-4 md:hidden">
+      <a href="index.html" class="block hover:text-green-600">Home</a>
+      <a href="about.html" class="block hover:text-green-600">About</a>
+      <a href="services.html" class="block text-green-600 font-semibold">Services</a>
+      <a href="contact.html" class="block hover:text-green-600">Contact</a>
+    </div>
   </header>
 
   <!-- Services Section -->
-  <section class="max-w-6xl mx-auto py-16 px-6">
-    <h2 class="text-3xl font-bold text-center mb-10">Our Services</h2>
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+  <section class="max-w-6xl mx-auto py-12 md:py-16 px-6">
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-10">Our Services</h2>
+    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
       <div class="bg-white p-6 rounded-xl shadow">
-        <h3 class="text-xl font-semibold mb-2">Sports Injury Rehab</h3>
+        <h3 class="text-lg md:text-xl font-semibold mb-2">Sports Injury Rehab</h3>
         <p>Tailored recovery programs for athletes and active individuals to regain strength and performance.</p>
       </div>
       <div class="bg-white p-6 rounded-xl shadow">
-        <h3 class="text-xl font-semibold mb-2">Back & Neck Pain</h3>
+        <h3 class="text-lg md:text-xl font-semibold mb-2">Back & Neck Pain</h3>
         <p>Relief from stiffness, pain, and postural issues with effective manual therapy and exercise plans.</p>
       </div>
       <div class="bg-white p-6 rounded-xl shadow">
-        <h3 class="text-xl font-semibold mb-2">Post-Surgery Recovery</h3>
+        <h3 class="text-lg md:text-xl font-semibold mb-2">Post-Surgery Recovery</h3>
         <p>Safe, structured physiotherapy to restore mobility and function after surgery.</p>
       </div>
       <div class="bg-white p-6 rounded-xl shadow">
-        <h3 class="text-xl font-semibold mb-2">Massage Therapy</h3>
+        <h3 class="text-lg md:text-xl font-semibold mb-2">Massage Therapy</h3>
         <p>Improve circulation, reduce muscle tension, and promote relaxation through expert massage techniques.</p>
       </div>
       <div class="bg-white p-6 rounded-xl shadow">
-        <h3 class="text-xl font-semibold mb-2">Joint & Mobility Therapy</h3>
+        <h3 class="text-lg md:text-xl font-semibold mb-2">Joint & Mobility Therapy</h3>
         <p>Enhance flexibility, reduce stiffness, and strengthen joints for better daily movement.</p>
       </div>
       <div class="bg-white p-6 rounded-xl shadow">
-        <h3 class="text-xl font-semibold mb-2">Custom Exercise Programs</h3>
+        <h3 class="text-lg md:text-xl font-semibold mb-2">Custom Exercise Programs</h3>
         <p>Personalised exercise routines to prevent injuries and improve long-term health.</p>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-gray-800 text-gray-300 text-center py-6">
+  <footer class="bg-gray-800 text-gray-300 text-center py-6 mt-8">
     <p>&copy; 2025 PhysioCare | All rights reserved.</p>
   </footer>
 
+  <script>
+    const btn = document.getElementById("menu-btn");
+    const mobileMenu = document.getElementById("mobile-menu");
+    btn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  </script>
 </body>
 </html>
