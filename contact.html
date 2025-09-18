@@ -39,14 +39,14 @@
       <p><strong>Address:</strong> 123 High Street, Gloucester, UK</p>
     </div>
 
-    <!-- Netlify Form -->
+    <!-- Netlify Form (Honeypot Only) -->
     <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" action="/success.html" class="bg-white shadow-md rounded-xl p-6 space-y-4">
       <!-- Hidden inputs required by Netlify -->
       <input type="hidden" name="form-name" value="contact">
       <p class="hidden">
         <label>Don’t fill this out if you're human: <input name="bot-field"></label>
       </p>
-
+    
       <div>
         <label class="block mb-1">Name</label>
         <input type="text" name="name" required class="w-full border rounded p-2 focus:ring focus:ring-green-200">
@@ -59,10 +59,7 @@
         <label class="block mb-1">Message</label>
         <textarea name="message" rows="4" required class="w-full border rounded p-2 focus:ring focus:ring-green-200"></textarea>
       </div>
-
-      <!-- Netlify reCAPTCHA (enable in dashboard if needed) -->
-      <div data-netlify-recaptcha="true"></div>
-
+    
       <button type="submit" class="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700">
         Send Message
       </button>
@@ -84,3 +81,4 @@
   </script>
 </body>
 </html>
+
