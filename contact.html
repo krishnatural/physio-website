@@ -8,15 +8,25 @@
 </head>
 <body>
   <main>
-    <h2>Contact Us</h2>
-    <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" action="/success.html" class="contact-form">
-      <input type="hidden" name="form-name" value="contact">
-      <p class="hidden"><label>Don’t fill this out: <input name="bot-field"></label></p>
-      <div><label>Name</label><input type="text" name="name" required></div>
-      <div><label>Email</label><input type="email" name="email" required></div>
-      <div><label>Message</label><textarea name="message" rows="4" required></textarea></div>
-      <button type="submit">Send Message</button>
-    </form>
+    <div class="page-container">
+      <h2>Contact Us</h2>
+      <form name="contact" method="POST" data-netlify="true" action="success.html" netlify-honeypot="bot-field">
+        <p style="display:none;">
+          <label>Don’t fill this out: <input name="bot-field"></label>
+        </p>
+
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
   </main>
   <script src="/js/site.js"></script>
 </body>
