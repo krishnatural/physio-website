@@ -162,3 +162,49 @@ main {
 .page-container li {
   margin-bottom: 0.5rem;
 }
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Hero Section */
+.hero {
+  background: url('images/hero-physio.jpg') center/cover no-repeat;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: #fff;
+  text-align: center;
+}
+
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.55);
+  padding: 2rem;
+  border-radius: 12px;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.btn-cta {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background: #2563eb;
+  color: #fff;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.btn-cta:hover {
+  background: #1e40af;
+}

@@ -1,19 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PhysioCare - Home</title>
-  <link rel="stylesheet" href="/css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PhysioCare</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <script src="js/navbar.js" defer></script>
 </head>
 <body>
+  <!-- Navbar -->
+  <div id="navbar"></div>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-overlay">
+      <h1>Move Better, Live Stronger</h1>
+      <p>Expert physiotherapy tailored to your recovery and wellness.</p>
+      <a href="#contact-form" class="btn-cta">Book Appointment</a>
+    </div>
+  </section>
+
+  <!-- Main Content -->
   <main>
     <div class="page-container">
       <h2>Welcome to PhysioCare</h2>
       <p>Your trusted physiotherapy clinic helping you move better and live pain-free.</p>
       <p>We specialize in personalized treatment plans to restore mobility, reduce pain, and improve your overall well-being.</p>
     </div>
+
+    <!-- Contact Form on Homepage -->
+    <div class="page-container" id="contact-form">
+      <h2>Contact Us</h2>
+      <form name="contact-home" method="POST" data-netlify="true" action="success.html" netlify-honeypot="bot-field">
+        <p style="display:none;">
+          <label>Don’t fill this out: <input name="bot-field"></label>
+        </p>
+
+        <label for="name-home">Name</label>
+        <input type="text" id="name-home" name="name" required>
+
+        <label for="email-home">Email</label>
+        <input type="email" id="email-home" name="email" required>
+
+        <label for="message-home">Message</label>
+        <textarea id="message-home" name="message" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
   </main>
-  <script src="/js/site.js"></script>
+
+  <!-- Footer -->
+  <div id="footer"></div>
 </body>
 </html>
