@@ -4,9 +4,12 @@ body {
     padding: 0;
     background-color: #f9fafb;
     color: #333;
+    display: flex; /* Added for sticky footer */
+    flex-direction: column; /* Added for sticky footer */
+    min-height: 100vh; /* Added for sticky footer */
 }
 
-header, footer {
+header {
     background: #fff;
     border-bottom: 1px solid #eaeaea;
     padding: 1rem 2rem;
@@ -15,14 +18,20 @@ header, footer {
     z-index: 1000;
 }
 
+main.container {
+    flex: 1; /* Added to push footer down */
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
 footer {
-    position: relative; /* Changed from sticky */
-    border-bottom: none;
+    background: #fff;
     border-top: 1px solid #eaeaea;
     text-align: center;
     padding: 1rem;
     font-size: 0.9rem;
-    margin-top: 2rem;
+    margin-top: auto; /* Pushes the footer to the bottom */
 }
 
 nav {
@@ -46,6 +55,11 @@ nav a:hover, nav a.active {
     color: #16a34a;
     border-bottom: 2px solid #16a34a;
     padding-bottom: 2px;
+}
+
+/* PhysioCare logo bold on all pages */
+.logo a strong {
+    font-weight: bold;
 }
 
 /* Hamburger button */
@@ -190,4 +204,8 @@ button:hover {
 .cta-container {
     text-align: center;
     margin-top: 2rem;
+}
+
+.hidden {
+    display: none; /* Hides the spam trap from view */
 }
