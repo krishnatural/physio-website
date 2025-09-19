@@ -1,6 +1,5 @@
-
 document.addEventListener("DOMContentLoaded", () => {
-  fetch("/navbar.html")
+  fetch("partials/navbar.html")
     .then(response => response.text())
     .then(data => {
       document.getElementById("navbar").innerHTML = data;
@@ -8,7 +7,8 @@ document.addEventListener("DOMContentLoaded", () => {
       // Highlight active page
       const currentPage = window.location.pathname.split("/").pop();
       document.querySelectorAll("nav a").forEach(link => {
-        if (link.getAttribute("href") === currentPage) {
+        const linkHref = link.getAttribute("href");
+        if (linkHref === currentPage || (currentPage === "" && linkHref === "index.html")) {
           link.classList.add("active");
         }
       });
@@ -19,11 +19,12 @@ document.addEventListener("DOMContentLoaded", () => {
       if (hamburger && links) {
         hamburger.addEventListener("click", () => {
           links.classList.toggle("open");
+          document.body.classList.toggle("nav-open");
         });
       }
     });
 
-  fetch("/footer.html")
+  fetch("partials/footer.html")
     .then(response => response.text())
     .then(data => {
       document.getElementById("footer").innerHTML = data;
