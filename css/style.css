@@ -209,3 +209,55 @@ button:hover {
 .hidden {
     display: none; /* Hides the spam trap from view */
 }
+
+/* === Service Images === */
+.service-tile img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+/* Headings & text inside tiles */
+.service-tile h3 {
+  font-size: 1.2rem;
+  color: #111;
+  margin-bottom: 0.5rem;
+}
+
+.service-tile p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Responsive improvements for smaller screens */
+@media (max-width: 768px) {
+  .service-tile {
+    padding: 1rem;
+  }
+
+  .service-tile img {
+    height: 180px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .service-tile img {
+    height: 160px;
+  }
+
+  .cta-button {
+    width: 100%;
+    display: inline-block;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+}
