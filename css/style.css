@@ -308,3 +308,10 @@ button:hover {
   }
 }
 
+main ul {
+  margin: 1rem 0 1rem 1.5rem;
+  line-height: 1.6;
+}
+main li {
+  margin-bottom: 0.5rem;
+}
