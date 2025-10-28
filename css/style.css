@@ -261,3 +261,50 @@ button:hover {
     font-size: 1.6rem;
   }
 }
+
+/* === Hero Section === */
+.hero {
+  position: relative;
+  background: url('../images/home.jpg') no-repeat center center/cover;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.45);
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 700px;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+/* Responsive hero text */
+@media (max-width: 768px) {
+  .hero {
+    min-height: 50vh;
+    padding: 2rem;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+}
+
